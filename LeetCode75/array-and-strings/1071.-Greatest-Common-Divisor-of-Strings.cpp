@@ -1,0 +1,16 @@
+/*
+
+    Exercicio com o objeto de encontrar o maior padrao repetitivo pertencente a duas strings, da seguinte forma:
+    Input: str1 = "ABABAB", str2 = "ABAB"
+    Output: "AB"
+
+*/
+
+class Solution {
+public:
+    string gcdOfStrings(string str1, string str2) {
+        if (str1 + str2 != str2 + str1) return "";
+        int mmc = gcd(str1.size(), str2.size());
+        return str1.substr(0,mmc);
+    }
+};
